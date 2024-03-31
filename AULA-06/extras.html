@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extras</title>
+</head>
+<body>
+    <script>
+        var salario = Number(prompt("Digite seu salario: "))
+        var aumento = Number(prompt("Digite a porcentagem que você quer de aumento"))
+
+        var salarioAumentado = salario + (salario * (aumento / 100))
+
+        document.write(`Você ganhou um aumento de ${aumento} % no seu salario <br>`)
+        document.write(`ao invés de ${salario.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} está ${salarioAumentado.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+    </script>
+</body>
+</html>
