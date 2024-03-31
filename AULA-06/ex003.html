@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa...</title>
+    <style>
+        body {
+            background-color: rgb(114, 114, 172);
+            text-align: center; /* Comentario Css*/
+            color: white;
+        }
+        h1{
+            color: rgb(255, 136, 0);
+            font-size: 20px Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá Mundo!</h1> <!-- Comentario Html-->
+    <p>Já me livrei da maldição!!</p>
+    <script>
+        var n1 = Number.parseInt(prompt("Digite um numero: ")) // string
+        var n2 = Number(prompt("Digite outro numero: ")) // string
+        var s = n1 + n2
+        // alert("A soma dos valores é " + s) // concatenação
+        alert(`A soma entre ${n1} e ${n2} é igual a ${s}`)
+
+        // number + number para adicao 
+        // string + string para concatenação
+        // string TO number [Number(variavel) ou Number.parseInt()]        
+        // number TO string [string(variavel)]
+        
+        /* ------------------------------------------ */
+                
+        var nome = "Gustavo"
+        var idade = 41
+        var nota = 5.5
+        console.log("O aluno " + nome + " com " + idade + " anos tirou a nota " + nota)
+        console.log(`O aluno ${nome} com ${idade} anos tirou a nota ${nota}`) // template string
+        
+    </script>
+</body>
+</html>
