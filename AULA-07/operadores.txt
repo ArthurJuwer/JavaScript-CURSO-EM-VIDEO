@@ -1,0 +1,37 @@
+OPERADORES 
+    [
+        1. aritmeticos
+        2. atribuição
+    ]
+    3. relacionais
+    4. logicos
+    5. ternário
+
+    ARITMÉTRICOS
+    [
+        +  // ADIÇÃO
+        -  // SUBTRAÇÃO
+        *  // MULTIPLICAÇÃO
+        /  // DIVISÃO
+        %  // RESTO DA DIVISÃO
+        ** // AO QUADRADO
+    ]
+
+    ORDEM DE PRECEDÊNCIA
+    [
+        ()
+        **
+        * | / | %
+        + | -
+    ]
+
+    AUTO ATRIBUIÇÕES
+
+    n = 3
+    n = n + 1 // n começa a ter o valor de 4
+    ou 
+    n += 1 // n começa a ter o valor de 4
+    [(n = n) + 1]
+    ou
+    n++ // n começa a ter o valor de 4
+    [n++ seria adicionar ele + 1]
