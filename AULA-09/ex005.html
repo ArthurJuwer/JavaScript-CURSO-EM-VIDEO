@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>primeiros passos com DOM</title> <!--Document Object Model-->
+    <style>
+        body{
+            background: rgb(68, 125, 199);
+            color: white;
+            font: normal 16pt Arial 
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p class="dom">Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg" name='msg'>Clique em Mim</div>
+    <script>
+        // window.document.write("Sua URL: ")
+        // window.document.write(window.document.URL)
+        
+        var p1 
+        var p2
+        var d
+        
+
+        // METODOS DE ACESSO
+
+        // ver se é Elements -> precisa de []
+        // ver se é Element - > tag unica
+
+        //  por Marca
+        p1 = document.getElementsByTagName("p")[0] // primeiro -> p
+        document.write("O primeiro paragrafo esta escrito assim: "+ p1.innerText)
+        p1.style.color = "black"
+        
+        p2 = document.getElementsByTagName("p")[1]
+        document.write("<br><br> innerText -> puxa só o texto: " + p2.innerText)
+        document.write("<br> innerHTML -> puxa o comando inteiro: " + p2.innerHTML)
+        //  por ID
+        var d = document.getElementById('msg')
+        d.style.background = 'red'
+        // d.innerText = 'Estou aguardando...'
+        // window.document.getElementById('msg').innerText = 'Olá!' // comando inteiro
+
+       
+        //  por Nome
+        var d2 = document.getElementsByName('msg')[0]
+        d2.innerText = 'Clique em mim agora!'
+
+        //  por Classe
+        var dc = document.getElementsByClassName("dom")[0]
+        dc.style.background = 'blue'
+
+        //  por Seletor
+        var d3 = document.querySelector('div#msg') // id=# class=.
+        d3.style.color = 'yellow'
+    </script>
+</body>
+</html>
