@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+            font: normal 15pt;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color:rgb(26, 26, 26) 
+            
+        }
+        div.container{
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+        }
+        input, button{
+            padding: 10px;
+        }
+        button{
+            width: 90px;
+            color: white;
+            background-color: black;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        div.bloco1{
+            
+            background-color: white;
+            padding: 50px;
+            width: 500px;
+            height: 500px;
+            text-align: center; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="bloco1">
+            <h1>Confira sua idade em diferentes tipos.</h1>
+            <h2>Digite sua idade em ANOS:</h2>
+            <input type="text" placeholder="Digite Aqui..." id="idadeAnos">
+            <button onclick="acionar()">Ver</button>
+
+            
+            <h2>Sua idade em meses é: </h2>
+            <p id="idadeMeses">0 Meses</p>
+            <h2>Sua idade em dias é: </h2>
+            <p id="idadeDias">0 Dias</p>
+            <h2>Sua idade em horas é: </h2>
+            <p id="idadeHoras">0 Horas</p>
+
+        </div>
+    </div>
+    <script>
+        
+        function acionar(){
+
+            var idadeAnos = document.getElementById("idadeAnos").value
+            var idadeMeses = document.getElementById("idadeMeses")
+            var idadeDias = document.getElementById("idadeDias")
+            var idadeHoras = document.getElementById("idadeHoras")
+
+            var resMeses = Number(idadeAnos) * 12
+            var resDias = Number(idadeAnos) * 365
+            var resHoras = Number(idadeAnos) * 8766
+            
+           
+            idadeMeses.innerHTML = resMeses + " Meses"
+            idadeDias.innerHTML = resDias + " Dias"
+            idadeHoras.innerHTML = resHoras + " Horas"
+        }
+        
+
+        
+    </script>
+</body>
+</html>

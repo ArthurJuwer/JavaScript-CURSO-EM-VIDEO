@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            background: green;
+            font: normal 16pt arial;
+            color: #fff;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onmouseenter="entrar()" onmouseout="sair()"> <!--Feito com HTML-->
+        ATIVADO
+    </div>
+    <script>
+        var bloco = document.getElementById("area")
+        bloco.addEventListener('click', clicar) // feito com JS
+
+        function clicar(){
+            bloco.style.background = 'red'
+            bloco.innerText = "DESATIVADO"
+        }
+        function entrar(){
+            bloco.style.background = 'gray'
+            bloco.innerHTML = "Deseja desativar?" 
+        }
+        function sair(){
+            bloco.style.background = 'green'
+            bloco.innerHTML = "ATIVADO"
+        }
+    </script>
+</body>
+</html>
