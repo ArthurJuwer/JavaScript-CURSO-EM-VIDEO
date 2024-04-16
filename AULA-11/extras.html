@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passaporte</title>
+</head>
+<body>
+    <h1>Sistema de Passaporte</h1>
+    <label for="">Informe qual pais você nasceu: </label>
+    <input type="text" id="pais">
+    <input type="button" value="Ver" id="acionar">
+    <div id="nacionalidade">
+
+    </div>
+
+    <script>
+        // var pais = "EUA"
+        // console.log(`Vivendo no ${pais} você é`)
+        // if(pais != "Brasil"){
+        //     console.log("Estrangeiro")
+        // } else {
+        //     console.log("Brasileiro")
+        // }
+        
+        
+        function acionar(){
+            var pais = document.querySelector("input#pais")
+            var nacionalidade = document.querySelector("div#nacionalidade")
+            paisToUpper = (pais.value).toUpperCase()
+           
+            if(paisToUpper != "BRASIL"){                
+                nacionalidade.innerHTML = "<p>Você nasceu fora do Brasil. Seu passaporte é <strong> ESTRANGEIRO </strong></p>"
+            }
+            else{
+                nacionalidade.innerHTML = "<p>Você nasceu no Brasil. Seu passaporte é <strong> BRASILEIRO </strong></p>"
+            
+            }
+        }
+        
+
+        var btn = document.querySelector("input#acionar")
+        btn.addEventListener("click", acionar)
+        
+    </script>
+</body>
+</html>
