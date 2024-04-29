@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    height: 100%;
+    background-color:rgb(78, 126, 214);
+}
+header{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 45px;
+    color: #fff;;
+}
+main{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+div.container{
+    background-color: #fff;
+    padding: 40px;
+    padding-right: 300px;
+    border-radius: 20px;
+}
+div.container-numbers{
+    font-size: 20px;
+    & input, button{
+        padding: 5px;
+    }
+}
+div.container-resultado select{
+    margin-top: 20px;
+    width: 410px;
+    height: 200px;
+}
